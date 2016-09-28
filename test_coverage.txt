@@ -1,0 +1,10 @@
+Test Coverage Overview:
+1. Tests covered: 4/44
+2. Services not ready or used: 3/44
+3. Tests supported but not covered: 7/44
+4. Tests not supported: 30/44
+
+#   Service                                                        Method                  Status
+1   /vliveshow-api-app/v1/users/phone/password_login               http post               covered
+2   /vliveshow-api-app/v1/liveshow/list                            http get                covered
+2   /vliveshow-api-app/v1/                         http get                covered

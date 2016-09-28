@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11.20141228">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">10</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1418708738000</longProp>
+        <longProp name="ThreadGroup.end_time">1418708738000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <net.unit8.jmeter.protocol.socket__io.sampler.SocketIOSampler guiclass="net.unit8.jmeter.protocol.socket_io.control.gui.SocketIOSamplerGui" testclass="net.unit8.jmeter.protocol.socket_io.sampler.SocketIOSampler" testname="Socket.io Request Sampler" enabled="true">
+          <stringProp name="SocketIOSampler.domain">localhost</stringProp>
+          <stringProp name="SocketIOSampler.path">/</stringProp>
+          <stringProp name="SocketIOSampler.port">1337</stringProp>
+          <stringProp name="SocketIOSampler.protocol">https</stringProp>
+          <stringProp name="SocketIOSampler.loginPath">/ws/login</stringProp>
+          <stringProp name="SocketIOSampler.connectTimeout">2000</stringProp>
+          <stringProp name="SocketIOSampler.ackTimeout">2000</stringProp>
+          <stringProp name="SocketIOSampler.recvTimeout">2000</stringProp>
+          <stringProp name="SocketIOSampler.sendEvent">text</stringProp>
+          <stringProp name="SocketIOSampler.sendMessage">{
+        event_id:1,
+        type:chat,
+        recv_type: 0,
+        user_id:38, 
+        text:12345
+}</stringProp>
+          <stringProp name="SocketIOSampler.ackMessage"></stringProp>
+          <stringProp name="SocketIOSampler.recvMessage">chat</stringProp>
+          <elementProp name="SocketIOSampler.userInfos" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOUserInfos">
+            <collectionProp name="UserInfos.users">
+              <elementProp name="tony.chen-sh" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOUserInfo">
+                <stringProp name="username">tony.chen-sh</stringProp>
+                <stringProp name="password">123</stringProp>
+                <stringProp name="device">ipad</stringProp>
+                <stringProp name="uuid">1416846774989</stringProp>
+                <stringProp name="version">2.5.11113</stringProp>
+                <stringProp name="send event">text</stringProp>
+                <stringProp name="send message">{event_id:1, type:chat, recv_type: 0, user_id:38, text:12345}</stringProp>
+              </elementProp>
+              <elementProp name="shi.li" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOUserInfo">
+                <stringProp name="username">shi.li</stringProp>
+                <stringProp name="password">1234</stringProp>
+                <stringProp name="device">ipad</stringProp>
+                <stringProp name="uuid">asd</stringProp>
+                <stringProp name="version">2.5.11113</stringProp>
+                <stringProp name="send event">text</stringProp>
+                <stringProp name="send message">{event_id:1, type:chat, recv_type: 0, user_id:72, text:22222}</stringProp>
+              </elementProp>
+              <elementProp name="jiaxi.luo" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOUserInfo">
+                <stringProp name="username">jiaxi.luo</stringProp>
+                <stringProp name="password">123</stringProp>
+                <stringProp name="device">ipad</stringProp>
+                <stringProp name="uuid">asd</stringProp>
+                <stringProp name="version">2.5.11113</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SocketIOSampler.actionElements" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElements">
+            <collectionProp name="ActionElements.actions">
+              <elementProp name="actionName:&apos;Call&apos;|userIndex:&apos;0&apos;|id:&apos;net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement@739de5b0&apos;" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement">
+                <stringProp name="actionName">Call</stringProp>
+                <stringProp name="userIndex">0</stringProp>
+              </elementProp>
+              <elementProp name="actionName:&apos;CallAccept&apos;|userIndex:&apos;1&apos;|id:&apos;net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement@352c11d&apos;" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement">
+                <stringProp name="actionName">CallAccept</stringProp>
+                <stringProp name="userIndex">1</stringProp>
+              </elementProp>
+              <elementProp name="actionName:&apos;CallReject&apos;|userIndex:&apos;2&apos;|id:&apos;net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement@2e04589f&apos;" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement">
+                <stringProp name="actionName">CallReject</stringProp>
+                <stringProp name="userIndex">2</stringProp>
+              </elementProp>
+              <elementProp name="actionName:&apos;CallEnd&apos;|userIndex:&apos;0&apos;|id:&apos;net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement@1f564653&apos;" elementType="net.unit8.jmeter.protocol.socket_io.util.SocketIOActionElement">
+                <stringProp name="actionName">CallEnd</stringProp>
+                <stringProp name="userIndex">0</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </net.unit8.jmeter.protocol.socket__io.sampler.SocketIOSampler>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,26 @@
+Glossary:
+1. Target server: the server runs aurora that being tested.
+2. Monitor server: the server runs the script and JMeter to kick off tests, and collect metrics.
+
+How to setup the test environment:
+1. Install and run MySQL on monitor server
+2. Install JMeter on monitor server
+3. Install PerfMon plugins in JMeter and put PerfMon on target server
+4. Import the databse (hs_perf.sql) on monitor server
+5. Set up parameters in env.sh
+
+How to kick off a test:
+1. Make sure Aurora server, MySQL, and Redis are running on target server and their PIDs are properly configured in evn.sh
+2. Set up the test plans and load counts to run in env.sh
+3. Make sure PerfMon is running on target server
+4. Make sure test data CSVs are correct
+5. Run start_test.sh
+
+How to write a test plan:
+1. 
+
+TODO:
+1. Detailed readme
+2. Properly ends the test
+3. Find APIs and coverages (wait for documents update)
+4. File Transfer & Socket.io

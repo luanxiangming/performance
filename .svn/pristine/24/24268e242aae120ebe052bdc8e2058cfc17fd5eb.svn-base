@@ -1,0 +1,113 @@
+
+
+#	User_A					User_B					User_C
+-----------------------------------------------------------------------
+1 	call.call 				call.accept				call.accept
+	call.end
+-----------------------------------------------------------------------
+2 	call.call 				call.reject				call.accept
+	call.end
+-----------------------------------------------------------------------
+3 	call.call 				call.reject				call.reject
+-----------------------------------------------------------------------
+4   call.call       		call.accept				call.accept
+							video.call.mute			call.leave
+							call.leave
+-----------------------------------------------------------------------
+5   call.call       		call.accept				call.accept
+	presentation.show
+	call.end						
+-----------------------------------------------------------------------
+6   call.call       		call.accept				call.accept
+	presentation.show
+							presentation.hide		call.leave
+	presentation.close
+	call.end					
+-----------------------------------------------------------------------
+7   call.call       		call.accept				call.accept
+	presentation.show
+							call.leave				
+													call.leave
+-----------------------------------------------------------------------
+8   call.call       		call.accept				call.accept
+	presentation.show
+	annotation.start
+	annotation.draw			annotation.draw			annotation.draw
+	call.end
+-----------------------------------------------------------------------
+9   call.call       		call.accept				call.accept
+	presentation.show
+	annotation.start
+	annotation.draw			annotation.draw			annotation.draw
+	annotation.clearself	annotation.draw			annotation.undo
+	annotation.draw			annotation.clearself	annotation.draw	
+	annotation.undo			annotation.draw			annotation.clearself
+	annotation.draw			annotation.undo			annotation.draw
+	annotation.clear
+	annotation.draw			annotation.draw			annotation.draw
+							annotation.clear
+	annotation.draw			annotation.draw			annotation.draw
+													annotation.clear
+	annotation.draw			annotation.draw			annotation.draw
+							call.leave
+													call.leave
+-----------------------------------------------------------------------
+10  call.call       		call.accept				call.accept
+	presentation.show
+	annotation.start
+	annotation.draw			annotation.draw			annotation.draw
+	annotation.hide			annotation.draw			annotation.draw	
+	annotation.show			annotation.hide			annotation.draw	
+	annotation.draw			annotation.show			annotation.hide
+	annotation.draw			annotation.draw			annotation.show
+	annotation.draw			call.leave				annotation.draw
+	annotation.draw			annotation.restore		annotation.draw
+	annotation.draw			annotation.draw			call.leave
+	annotation.draw			annotation.draw			annotation.restore
+	call.end
+-----------------------------------------------------------------------
+11  presence				presence				presence
+	call.call 				presence				presence
+	presence 				call.accept				call.accept
+	presence				presence				presence
+	presentation.show		presence				presence
+	presence				presence				presence
+	annotation.start		presence				presence
+	presence				presence				presence
+	call.end
+	presence				presence				presence
+-----------------------------------------------------------------------
+
+
+
+
+15  annotation.start        socket.io               test not supported
+16  annotation.draw         socket.io               test not supported
+17  annotation.clear        socket.io               test not supported
+18  annotation.clearself    socket.io               test not supported
+19  annotation.undo         socket.io               test not supported
+20  annotation.hide         socket.io               test not supported
+21  annotation.show         socket.io               test not supported
+22  annotation.restore      socket.io               test not supported
+23  call.call               socket.io               test not supported
+24  call.invite             socket.io               test not supported
+25  call.accept             socket.io               test not supported
+26  call.reject             socket.io               test not supported
+27  call.end                socket.io               test not supported
+28  call.join               socket.io               test not supported
+29  call.leave              socket.io               test not supported
+30  call.calling            socket.io               test not supported
+31  video.call.mute         socket.io               test not supported
+32  video.call.transfer     socket.io               test not supported
+33  File transfer           TCP stream & socket.io  test not supported
+34  presence                socket.io               test not supported
+35  user                    socket.io               test not supported
+36  contact.new             socket.io               test not supported
+37  contact.delete          socket.io               test not supported
+38  page.survey             socket.io               test not supported
+39  app.state               socket.io               test not supported
+40  presentation.status     socket.io               test not supported
+41  presentation.hide       socket.io               test not supported
+42  presentation.show       socket.io               test not supported
+43  presentation.close      socket.io               test not supported
+44  Text message            socket.io               test not supported

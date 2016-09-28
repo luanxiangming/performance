@@ -1,0 +1,51 @@
+Test Coverage Overview:
+1. Tests covered: 4/44
+2. Services not ready or used: 3/44
+3. Tests supported but not covered: 7/44
+4. Tests not supported: 30/44
+
+#   Service                 Method                  Status
+1   /ws/login               http post               covered
+2   /ws/call/history        http get                not covered
+3   /ws/contact/list        http get                covered
+4   /ws/contact/listByOrg   http get                covered
+5   /ws/contact/search      http get                covered
+6   /ws/contact/add         http post               not covered
+7   /ws/contact/delete      http post               service not used
+8   /ws/group/get           http get                not covered
+9   /ws/group/call          http get                not covered
+10  /ws/group/create        http post               not covered
+11  /ws/group/addMember     http post               service not ready
+12  /ws/group/deleteMember  http post               service not ready
+13  /ws/message/list        http get                not covered
+14  /ws/message/listGroup   http get                not covered
+15  annotation.start        socket.io               test not supported
+16  annotation.draw         socket.io               test not supported
+17  annotation.clear        socket.io               test not supported
+18  annotation.clearself    socket.io               test not supported
+19  annotation.undo         socket.io               test not supported
+20  annotation.hide         socket.io               test not supported
+21  annotation.show         socket.io               test not supported
+22  annotation.restore      socket.io               test not supported
+23  call.call               socket.io               test not supported
+24  call.invite             socket.io               test not supported
+25  call.accept             socket.io               test not supported
+26  call.reject             socket.io               test not supported
+27  call.end                socket.io               test not supported
+28  call.join               socket.io               test not supported
+29  call.leave              socket.io               test not supported
+30  call.calling            socket.io               test not supported
+31  video.call.mute         socket.io               test not supported
+32  video.call.transfer     socket.io               test not supported
+33  File transfer           TCP stream & socket.io  test not supported
+34  presence                socket.io               test not supported
+35  user                    socket.io               test not supported
+36  contact.new             socket.io               test not supported
+37  contact.delete          socket.io               test not supported
+38  page.survey             socket.io               test not supported
+39  app.state               socket.io               test not supported
+40  presentation.status     socket.io               test not supported
+41  presentation.hide       socket.io               test not supported
+42  presentation.show       socket.io               test not supported
+43  presentation.close      socket.io               test not supported
+44  Text message            socket.io               test not supported

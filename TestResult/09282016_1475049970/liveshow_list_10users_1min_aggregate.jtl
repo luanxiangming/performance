@@ -1,0 +1,4 @@
+sampler_label,aggregate_report_count,average,aggregate_report_median,aggregate_report_90%_line,aggregate_report_min,aggregate_report_max,aggregate_report_error%,aggregate_report_rate,aggregate_report_bandwidth,aggregate_report_stddev
+login,10,2563,2530,2720,2411,2859,1.0,0.8755034144633165,1.4522754880931534,126.57997471953963
+LiveShow List,1558,129,120,130,115,939,1.0,20.57553386775135,5.927521963854148,60.319936255762904
+TOTAL,1568,144,120,131,115,2859,1.0,19.873257287705957,5.898932588719898,203.1727863727054
