@@ -6,13 +6,13 @@ Glossary:
 How to setup the test environment:
 1. Install and run MySQL on monitor server.
 
-2. Download and unzip JMeter to monitor server (download binaries version 2.11 from http://mirror.symnds.com/software/Apache//jmeter/binaries/apache-jmeter-2.11.tgz). One can test it by opening /path/to/apache-jemeter-2.11/bin/jmeter .
+2. Download and unzip JMeter to monitor server (download binaries version 3.0 from http://mirror.symnds.com/software/Apache//jmeter/binaries/apache-jmeter-3.0.tgz). One can test it by opening /path/to/apache-jemeter-3.0/bin/jmeter .
 
-3. Download Jmeter Standard plugin 1.2.0 to monitor server (http://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.2.0.zip), unzip it. Put everything inside the /path/to/JMeterPlugins-Standard-1.2.0/lib/ext folder into /path/to/apache-jemeter-2.11/lib/ext (create the folder if not exists).
+3. Download Jmeter Standard plugin 1.3.1 to monitor server (http://jmeterplugins.com/downloads/index.html), unzip it. Put everything inside the /path/to/JMeterPlugins-Standard-1.3.1/lib/ext folder into /path/to/apache-jemeter-3.0/lib/ext (create the folder if not exists).
 
 4. Download PerfMon Server Agent 2.2.1 (http://jmeter-plugins.org/downloads/file/ServerAgent-2.2.1.zip), unzip it, and put it on target server.
 
-5. Copy the jar of SocketIO sampler to target server. (cp performance/jmeter-socket.io/target/ApacheJmeter_socket_io-0.1.0-SNAPSHOT-jar-with-dependencies.jar apache-jmeter-2.11/lib/ext/)
+5. Copy the jar of SocketIO sampler to target server. (cp performance/jmeter-socket.io/target/ApacheJmeter_socket_io-0.1.0-SNAPSHOT-jar-with-dependencies.jar apache-jmeter-3.0/lib/ext/)
 
 6. Create a database called vls_perf (or other name) in MySQL. One way is to execute "mysqladmin -h host -u username -p create vls_perf" and enter the password. Remeber to specify the correct host and username. If the command is executed on monitor server, "-h host" can be neglected.
 
@@ -56,7 +56,7 @@ How to kick off a test:
 
 How to write a test plan:
 1. Copy and paste a similar test plan in the TestPlan folder, and rename it to a meaningful name.
-2. Run the JMeter GUI by opening /path/to/apache-jemeter-2.11/bin/jmeter .
+2. Run the JMeter GUI by opening /path/to/apache-jemeter-3.0/bin/jmeter .
 3. Open the new test plan file through the GUI.
 4. Modify the "Path" and "Parameters" in the "HTTP Request".
 5. Modify the "Patterns to Test" in the "Response Assertion" following the "HTTP Request".

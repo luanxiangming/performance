@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11 r1554548">
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -119,7 +119,9 @@
           </HTTPSamplerProxy>
           <hashTree>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings"/>
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-547797305">&quot;success&quot;:true</stringProp>
+              </collectionProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
               <intProp name="Assertion.test_type">2</intProp>
@@ -176,16 +178,19 @@
           </HTTPSamplerProxy>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings"/>
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1846206001">&quot;results&quot;:{&quot;list&quot;</stringProp>
+            </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
+            <name>saveConfig</name>
             <value class="SampleSaveConfiguration">
               <time>true</time>
               <latency>true</latency>
@@ -202,16 +207,19 @@
               <responseData>false</responseData>
               <samplerData>false</samplerData>
               <xml>false</xml>
-              <fieldNames>false</fieldNames>
+              <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
               <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
               <assertionsResultsToSave>0</assertionsResultsToSave>
               <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
             </value>
           </objProp>
           <objProp>
+            <name></name>
             <value class="SampleSaveConfiguration">
               <time>true</time>
               <latency>true</latency>
@@ -243,6 +251,7 @@
         <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
+            <name>saveConfig</name>
             <value class="SampleSaveConfiguration">
               <time>true</time>
               <latency>true</latency>
@@ -259,16 +268,19 @@
               <responseData>false</responseData>
               <samplerData>false</samplerData>
               <xml>false</xml>
-              <fieldNames>false</fieldNames>
+              <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
               <requestHeaders>false</requestHeaders>
               <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
               <assertionsResultsToSave>0</assertionsResultsToSave>
               <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
             </value>
           </objProp>
           <objProp>
+            <name></name>
             <value class="SampleSaveConfiguration">
               <time>true</time>
               <latency>true</latency>
@@ -301,6 +313,7 @@
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
         <boolProp name="ResultCollector.error_logging">true</boolProp>
         <objProp>
+          <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -317,16 +330,19 @@
             <responseData>false</responseData>
             <samplerData>false</samplerData>
             <xml>false</xml>
-            <fieldNames>false</fieldNames>
+            <fieldNames>true</fieldNames>
             <responseHeaders>false</responseHeaders>
             <requestHeaders>false</requestHeaders>
             <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
           </value>
         </objProp>
         <objProp>
+          <name></name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -358,6 +374,7 @@
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
+          <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -374,16 +391,19 @@
             <responseData>false</responseData>
             <samplerData>false</samplerData>
             <xml>false</xml>
-            <fieldNames>false</fieldNames>
+            <fieldNames>true</fieldNames>
             <responseHeaders>false</responseHeaders>
             <requestHeaders>false</requestHeaders>
             <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
           </value>
         </objProp>
         <objProp>
+          <name></name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -415,6 +435,7 @@
       <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector - CPU" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
+          <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -431,16 +452,19 @@
             <responseData>false</responseData>
             <samplerData>false</samplerData>
             <xml>false</xml>
-            <fieldNames>false</fieldNames>
+            <fieldNames>true</fieldNames>
             <responseHeaders>false</responseHeaders>
             <requestHeaders>false</requestHeaders>
             <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
           </value>
         </objProp>
         <objProp>
+          <name></name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -506,6 +530,7 @@
       <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector - MEM" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
+          <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
@@ -522,16 +547,19 @@
             <responseData>false</responseData>
             <samplerData>false</samplerData>
             <xml>false</xml>
-            <fieldNames>false</fieldNames>
+            <fieldNames>true</fieldNames>
             <responseHeaders>false</responseHeaders>
             <requestHeaders>false</requestHeaders>
             <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
             <assertionsResultsToSave>0</assertionsResultsToSave>
             <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
           </value>
         </objProp>
         <objProp>
+          <name></name>
           <value class="SampleSaveConfiguration">
             <time>true</time>
             <latency>true</latency>
