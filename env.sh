@@ -34,6 +34,6 @@ MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
 # Test settings
-TEST_PLAN=("liveshow_list")
+TEST_PLAN=("2.0")
 LOAD_COUNT=(10)
 HTTP_PROTOCOL=http

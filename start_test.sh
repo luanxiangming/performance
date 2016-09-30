@@ -37,7 +37,10 @@ do
         printf "$(date +%s),${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min,${LOAD_COUNT[j]},$JMETER_HOST,$JMETER_LOAD_TIME," >>$JMETER_RESULT/script.txt
         echo "====${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min start running ==="
 
-        sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jliveshow_list=$JMETER_TEST_DATA/liveshow_list.csv -Jpassword_login=$JMETER_TEST_DATA/password_login.csv -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL
+        sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
+            -Jliveshow_list=$JMETER_TEST_DATA/liveshow_list.csv \
+            -Jpassword_login=$JMETER_TEST_DATA/password_login.csv
+
         java -jar $JMETER_CMD_RUNNER_PATH --tool Reporter --generate-csv $JMETER_RESULT/$aggregateFile --input-jtl $JMETER_RESULT/$logFile --plugin-type AggregateReport
 
         echo "==== ${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min finished ==="

@@ -48,10 +48,10 @@ async.forEach(webServices, function(service, callback1) {
                 rtAvg.push(Math.round(sum(response, 1) / len));
                 errPercent.push(errorNum(response).toFixed(2));
 
-                console.log("throughput: " + tps[1]);
-                console.log("bandwidth: " + bw[1]);
-                console.log("response time: " + rtAvg[1]);
-                console.log("error percentage: " + errPercent[1]);
+                console.log("Throughput: " + tps[1]);
+                console.log("Bandwidth: " + bw[1]);
+                console.log("Response time: " + rtAvg[1]);
+                console.log("Error percentage: " + errPercent[1]);
 
                 tps.push("\n");
                 rtAvg.push("\n");

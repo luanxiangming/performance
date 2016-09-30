@@ -9,6 +9,7 @@ test_servers/
 screenshot*.png
 
 TestResult/
+res/
 jmeter.log
 
 ### OSX ###
