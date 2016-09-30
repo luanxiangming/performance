@@ -33,7 +33,7 @@ MYSQL_USERNAME=root
 MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
-# Test settings
-TEST_PLAN=("2.0")
+# Test settings (liveshow_list, sendGroupMsg)
+TEST_PLAN=("sendGroupMsg")
 LOAD_COUNT=(10)
 HTTP_PROTOCOL=http

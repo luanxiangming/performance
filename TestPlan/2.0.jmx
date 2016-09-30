@@ -129,7 +129,7 @@ uid=6000719</stringProp>
           <boolProp name="useExpires">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="仅一次登录" enabled="true"/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="仅一次登录" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="手机+密码登录" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -282,12 +282,17 @@ uid=6000719</stringProp>
               </elementProp>
               <elementProp name="roomId" elementType="Argument">
                 <stringProp name="Argument.name">roomId</stringProp>
-                <stringProp name="Argument.value">57ece37ce4b0183688fd7ce1</stringProp>
+                <stringProp name="Argument.value">57edecf3e4b0fb8ec0908a78</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="host" elementType="Argument">
                 <stringProp name="Argument.name">host</stringProp>
-                <stringProp name="Argument.value">7000006</stringProp>
+                <stringProp name="Argument.value">7000007</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="token" elementType="Argument">
+                <stringProp name="Argument.name">token</stringProp>
+                <stringProp name="Argument.value">1c6a6b333384f63767b37293ee70ddae</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
