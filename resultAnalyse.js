@@ -31,7 +31,7 @@ async.forEach(webServices, function(service, callback1) {
             })
             .on('pipe',function() {
                 var len = response.length;
-                console.log("Request: " + len);
+                console.log("Requests: " + len);
 
                 var start = response[1].split(",");
                 console.log("Start: " + start);
@@ -43,15 +43,15 @@ async.forEach(webServices, function(service, callback1) {
                 console.log("Duration: " + time + " sec");
 
                 tps.push((len / time).toFixed(1));
-                bw.push(((sum(response, 10) / 1024) / time).toFixed(1));
+                bw.push(((sum(response, 9) / 1024) / time).toFixed(1));
 
                 rtAvg.push(Math.round(sum(response, 1) / len));
                 errPercent.push(errorNum(response).toFixed(2));
 
-                console.log("Throughput: " + tps[1]);
+                console.log("Requests / sec: " + tps[1]);
                 console.log("Avg Bandwidth: " + bw[1] + " KB");
                 console.log("Avg Response: " + rtAvg[1] + " ms");
-                console.log("Error percentage: " + errPercent[1]*100 + "%");
+                console.log("Error percentage: " + errPercent[1]*100 + " %");
 
                 tps.push("\n");
                 rtAvg.push("\n");
