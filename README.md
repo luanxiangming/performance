@@ -1,9 +1,9 @@
-Glossary:
+# Glossary:
 1. Target server: the server runs  and being tested.
 2. Monitor server: the server runs the script and JMeter to kick off tests, and collect metrics.
 
 
-How to setup the test environment:
+# How to setup the test environment:
 1. Install and run MySQL on monitor server.
 
 2. Download and unzip JMeter to monitor server (download binaries version 3.0 from http://mirror.symnds.com/software/Apache//jmeter/binaries/apache-jmeter-3.0.tgz). One can test it by opening /path/to/apache-jemeter-3.0/bin/jmeter .
@@ -44,7 +44,7 @@ MYSQL_DATABASE: the database used for performance test. "vls_perf" by default.
 The remaining settings are subject to change at each test, and will be explained in the "How to kick off a test" part.
 
 
-How to kick off a test:
+# How to kick off a test:
 1. Make sure  server, MySQL, and Redis are running on target server.
 2. Get PIDs of  server, MySQL and Redis, and configured them in MYSQL_PROCESS_ID, SERVER_PROCESS_ID, REDIS_PROCESS_ID in evn.sh.
 3. Set the TEST_PLAN and LOAD_COUNT in env.sh. TEST_PLAN is a list of strings denoting the test plan file names excluding the ".jmx" extension separated by space in a parenthesis. E.g. ("Login") or ("Login" "ContactList" "ContactOrg" "SearchUser"). LOAD_COUNT is a list of integers denoting the number of threads (users) each test to run. E.g. (10) or (10 50 70 100 130 170).
@@ -54,7 +54,7 @@ How to kick off a test:
 7. Terminate the PerfMon Server Agent by CRTL + C or kill -9 PID (replace PID with the PID of PerfMon Server Agent).
 
 
-How to write a test plan:
+# How to write a test plan:
 1. Copy and paste a similar test plan in the TestPlan folder, and rename it to a meaningful name.
 2. Run the JMeter GUI by opening /path/to/apache-jemeter-3.0/bin/jmeter .
 3. Open the new test plan file through the GUI.
@@ -62,12 +62,12 @@ How to write a test plan:
 5. Modify the "Patterns to Test" in the "Response Assertion" following the "HTTP Request".
 
 
-How to create a new action:
+# How to create a new action:
 1. Create a new actione file under package net.unit8.jmeter.protocol.socket_io.util and name if XXXAction, e.g. NewAction.
 2. Put the action name "New" in SocketIOActionTablePanel.ACTIONS.
 3. Extends NewAction from SocketIOAsyncActionBase and implements run().
 
 
-Documentations about JMeter:
+# Documentations about JMeter:
 1. User Manual: http://jmeter.apache.org/usermanual/index.html
-2. A good exmaple of building a web test plan: http://jmeter.apache.org/usermanual/build-web-test-plan.html
+2. A good example of building a web test plan: http://jmeter.apache.org/usermanual/build-web-test-plan.html
