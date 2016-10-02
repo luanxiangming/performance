@@ -26,7 +26,7 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="false">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="mobilePhone" elementType="Argument">
               <stringProp name="Argument.name">mobilePhone</stringProp>
@@ -36,7 +36,7 @@
             </elementProp>
             <elementProp name="token" elementType="Argument">
               <stringProp name="Argument.name">token</stringProp>
-              <stringProp name="Argument.value">c357050f877eddd77aa4dde80cf7d834</stringProp>
+              <stringProp name="Argument.value">57eb697fe4b04322c2ae34fb</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="userId" elementType="Argument">
@@ -129,33 +129,11 @@ uid=6000719</stringProp>
           <boolProp name="useExpires">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="仅一次登录" enabled="false"/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="仅一次登录" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="手机+密码登录" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="nationCode" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${nationCode}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">nationCode</stringProp>
-                </elementProp>
-                <elementProp name="mobilePhone" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${mobilePhone}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">mobilePhone</stringProp>
-                </elementProp>
-                <elementProp name="password" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">${password}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">password</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
@@ -163,7 +141,7 @@ uid=6000719</stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.protocol">http</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/vliveshow-api-app/v1/users/phone/password_login</stringProp>
+            <stringProp name="HTTPSampler.path">vliveshow-api-app/v1/users/phone/password_login?nationCode=86&amp;mobilePhone=${mobilePhone}&amp;password=vipabc</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -190,12 +168,12 @@ uid=6000719</stringProp>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="账号信息-dev" enabled="true">
               <stringProp name="delimiter">,</stringProp>
               <stringProp name="fileEncoding"></stringProp>
-              <stringProp name="filename">${__P(password_login)}</stringProp>
+              <stringProp name="filename">data/login_dev.csv</stringProp>
               <boolProp name="quotedData">false</boolProp>
               <boolProp name="recycle">true</boolProp>
               <stringProp name="shareMode">shareMode.all</stringProp>
               <boolProp name="stopThread">false</boolProp>
-              <stringProp name="variableNames">nationCode,mobilePhone,password</stringProp>
+              <stringProp name="variableNames">mobilePhone,password,nationCode</stringProp>
             </CSVDataSet>
             <hashTree/>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
@@ -282,17 +260,12 @@ uid=6000719</stringProp>
               </elementProp>
               <elementProp name="roomId" elementType="Argument">
                 <stringProp name="Argument.name">roomId</stringProp>
-                <stringProp name="Argument.value">57edecf3e4b0fb8ec0908a78</stringProp>
+                <stringProp name="Argument.value">57ec7bb1e4b07e6d9cf25fd9</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="host" elementType="Argument">
                 <stringProp name="Argument.name">host</stringProp>
-                <stringProp name="Argument.value">7000007</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="token" elementType="Argument">
-                <stringProp name="Argument.name">token</stringProp>
-                <stringProp name="Argument.value">1c6a6b333384f63767b37293ee70ddae</stringProp>
+                <stringProp name="Argument.value">7000006</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -594,7 +567,7 @@ uid=6000719</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="仅一次控制器" enabled="false"/>
+          <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="仅一次控制器" enabled="true"/>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="进入直播间" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -2896,7 +2869,7 @@ uid=6000719</stringProp>
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="直播间发消息" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="直播间发消息" enabled="false">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="roomId" elementType="HTTPArgument">
@@ -2975,7 +2948,7 @@ uid=6000719</stringProp>
           </ConstantTimer>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
-            <boolProp name="ResultCollector.error_logging">true</boolProp>
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
               <value class="SampleSaveConfiguration">

@@ -22,9 +22,9 @@ JMETER_HOST=dev.vliveshow.com
 JMETER_PORT=80
 # JMETER_PORT_AGENT=4444
 
-JMETER_START_TIME=10
-JMETER_LOAD_TIME=15
-JMETER_SHUT_TIME=10
+JMETER_START_TIME=5
+JMETER_LOAD_TIME=10
+JMETER_SHUT_TIME=5
 JMETER_LOAD_TIME_MIN=$[JMETER_LOAD_TIME/60]
 
 # MySQL settings
@@ -33,7 +33,7 @@ MYSQL_USERNAME=root
 MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
-# Test settings (liveshow_list, sendGroupMsg)
-TEST_PLAN=("sendGroupMsg")
+# Test settings (liveshow_list, send_groupmsg, join_room, like_it)
+TEST_PLAN=("send_groupmsg")
 LOAD_COUNT=(10)
 HTTP_PROTOCOL=http

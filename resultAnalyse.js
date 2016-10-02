@@ -31,27 +31,27 @@ async.forEach(webServices, function(service, callback1) {
             })
             .on('pipe',function() {
                 var len = response.length;
-                console.log("Response:" + len);
+                console.log("Request: " + len);
 
                 var start = response[1].split(",");
-                console.log("Start:" + start);
+                console.log("Start: " + start);
 
                 var stop = response[len - 1].split(",");
-                console.log("Stop:" + stop);
+                console.log("Stop: " + stop);
 
                 var time = (parseInt(stop[0]) - parseInt(start[0])) / 1000;
-                console.log("Time:" + time);
+                console.log("Duration: " + time + " sec");
 
                 tps.push((len / time).toFixed(1));
-                bw.push(((sum(response, 9) / 1024) / time).toFixed(1));
+                bw.push(((sum(response, 10) / 1024) / time).toFixed(1));
 
                 rtAvg.push(Math.round(sum(response, 1) / len));
                 errPercent.push(errorNum(response).toFixed(2));
 
                 console.log("Throughput: " + tps[1]);
-                console.log("Bandwidth: " + bw[1]);
-                console.log("Response time: " + rtAvg[1]);
-                console.log("Error percentage: " + errPercent[1]);
+                console.log("Avg Bandwidth: " + bw[1] + " KB");
+                console.log("Avg Response: " + rtAvg[1] + " ms");
+                console.log("Error percentage: " + errPercent[1]*100 + "%");
 
                 tps.push("\n");
                 rtAvg.push("\n");
@@ -85,7 +85,7 @@ function sum(response, position) {
 
 function errorNum(response) {
    var err = 0;
-   for (var i = 0; i < response.length; i++) {
+   for (var i = 1; i < response.length; i++) {
         var str = response[i].split(",");
         if (str[3] != 200 || str[7] != 'true')
             err++;
