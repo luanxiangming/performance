@@ -41,7 +41,7 @@ do
             -Jdev_var=$JMETER_TEST_DATA/DEV_VAR.csv \
             -Jprd_var=$JMETER_TEST_DATA/PRD_VAR.csv \
             -Jliveshow_list=$JMETER_TEST_DATA/liveshow_list.csv \
-            -Jpassword_login=$JMETER_TEST_DATA/password_login.csv \
+            -Jlogin_dev=$JMETER_TEST_DATA/login_dev.csv \
             -Jlogin_prd=$JMETER_TEST_DATA/login_prd.csv \
             -Jjoin_room=$JMETER_TEST_DATA/join_room.csv \
             -Jsend_groupmsg=$JMETER_TEST_DATA/send_groupmsg.csv
