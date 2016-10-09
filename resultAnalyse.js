@@ -87,7 +87,8 @@ function errorNum(response) {
    var err = 0;
    for (var i = 1; i < response.length; i++) {
         var str = response[i].split(",");
-        if (str[3] != 200 || str[7] != 'true')
+        // if (str[3] != 200 || str[7] != 'true')
+        if (str[3] != 200)
             err++;
    }
 
