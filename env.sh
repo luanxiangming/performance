@@ -18,10 +18,8 @@ JMETER_RESULT=${SCRIPT}/TestResult/${DATE}_${TIMESTAMP}
 JMETER_TEST_DATA=${SCRIPT}/TestData
 
 # JMeter settings
-# DEV
-# JMETER_HOST=dev.vliveshow.com
-# PRD
-JMETER_HOST=www.vliveshow.com
+JMETER_HOST=dev.vliveshow.com
+# JMETER_HOST=www.vliveshow.com
 JMETER_PORT=80
 # JMETER_PORT_AGENT=4444
 
@@ -37,6 +35,6 @@ MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift")
-TEST_PLAN=("ad_list" )
+TEST_PLAN=("send_gift")
 LOAD_COUNT=(10)
 HTTP_PROTOCOL=http

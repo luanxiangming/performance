@@ -5,6 +5,7 @@
 
 # How to setup the test environment:
 1. Install and run MySQL on monitor server.
+   Install and run Node.js on monitor server.
 
 2. Download and unzip JMeter to monitor server (download binaries version 3.0 from http://mirror.symnds.com/software/Apache//jmeter/binaries/apache-jmeter-3.0.tgz). One can test it by opening /path/to/apache-jemeter-3.0/bin/jmeter .
 
