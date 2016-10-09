@@ -18,8 +18,8 @@ JMETER_RESULT=${SCRIPT}/TestResult/${DATE}_${TIMESTAMP}
 JMETER_TEST_DATA=${SCRIPT}/TestData
 
 # JMeter settings
-JMETER_HOST=dev.vliveshow.com
-# JMETER_HOST=www.vliveshow.com
+# JMETER_HOST=dev.vliveshow.com
+JMETER_HOST=www.vliveshow.com
 JMETER_PORT=80
 # JMETER_PORT_AGENT=4444
 
