@@ -37,7 +37,7 @@ do
         printf "$(date +%s),${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min,${LOAD_COUNT[j]},$JMETER_HOST,$JMETER_LOAD_TIME," >>$JMETER_RESULT/script.txt
         echo "====${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min start running ==="
 
-        sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
+        JVM_ARGS="-Xms1024m -Xmx1024m" sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
             -Jdev_var=$JMETER_TEST_DATA/DEV_VAR.csv \
             -Jprd_var=$JMETER_TEST_DATA/PRD_VAR.csv \
             -Jliveshow_list=$JMETER_TEST_DATA/liveshow_list.csv \
