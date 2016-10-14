@@ -25,7 +25,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="DEV_LOGIN" enabled="false">
         <stringProp name="filename">${__P(login_dev)}</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="variableNames">nationCode,mobilePhone,password</stringProp>
+        <stringProp name="variableNames">mobilePhone,password,nationCode</stringProp>
         <stringProp name="delimiter">,</stringProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
