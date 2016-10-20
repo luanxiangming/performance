@@ -395,7 +395,7 @@
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
               <stringProp name="HTTPSampler.protocol">http</stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">vliveshow-callback-app/v1/tencent/imcallback?CallbackCommand=&apos;Group.CallbackAfterMemberExit&apos;&amp;SdkAppid=2.0&amp;ClientIP=192.168.111.215&amp;OptPlatform=IOS9</stringProp>
+              <stringProp name="HTTPSampler.path">vliveshow-callback-app/v1/tencent/imcallback?CallbackCommand=Group.CallbackAfterMemberExit&amp;SdkAppid=2.0&amp;ClientIP=192.168.111.215&amp;OptPlatform=IOS9</stringProp>
               <stringProp name="HTTPSampler.method">POST</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
