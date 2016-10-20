@@ -106,7 +106,6 @@ function fillRun_detail(run_id, script_name) {
         .lines
         .forEach(function(line) {
             var jtlResult = line.toString().split(",");
-            // if (jtlResult[3] === '200' && jtlResult[7] === 'true')
             if (jtlResult[3] === '200')
                 var errCode = "success";
             else
