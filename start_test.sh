@@ -40,9 +40,11 @@ do
         JVM_ARGS="-Xms1024m -Xmx1024m" sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
             -Jdev_var=$JMETER_TEST_DATA/DEV_VAR.csv \
             -Jprd_var=$JMETER_TEST_DATA/PRD_VAR.csv \
+            -Jstg_var=$JMETER_TEST_DATA/STG_VAR.csv \
             -Jliveshow_list=$JMETER_TEST_DATA/liveshow_list.csv \
             -Jlogin_dev=$JMETER_TEST_DATA/login_dev.csv \
             -Jlogin_prd=$JMETER_TEST_DATA/login_prd.csv \
+            -Jlogin_stg=$JMETER_TEST_DATA/login_stg.csv \
             -Jjoin_room=$JMETER_TEST_DATA/join_room.csv \
             -Jsend_groupmsg=$JMETER_TEST_DATA/send_groupmsg.csv
 

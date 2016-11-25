@@ -19,13 +19,14 @@ JMETER_TEST_DATA=${SCRIPT}/TestData
 
 # JMeter settings
 # JMETER_HOST=dev.vliveshow.com
-JMETER_HOST=www.vliveshow.com
+# JMETER_HOST=www.vliveshow.com
+JMETER_HOST=staging.vliveshow.com
 JMETER_PORT=80
 # JMETER_PORT_AGENT=4444
 
-JMETER_START_TIME=5
-JMETER_LOAD_TIME=5
-JMETER_SHUT_TIME=5
+JMETER_START_TIME=10
+JMETER_LOAD_TIME=10
+JMETER_SHUT_TIME=10
 JMETER_LOAD_TIME_MIN=$[JMETER_LOAD_TIME/60]
 
 # MySQL settings
@@ -35,6 +36,6 @@ MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift")
-TEST_PLAN=("join_room")
-LOAD_COUNT=(5)
+TEST_PLAN=("liveshow_list")
+LOAD_COUNT=(3)
 HTTP_PROTOCOL=http
