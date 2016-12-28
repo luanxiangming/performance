@@ -202,7 +202,7 @@
               <stringProp name="Sample.scope">all</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="getUserId" enabled="false">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="getUserId" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">userId</stringProp>
               <stringProp name="RegexExtractor.regex">&quot;username&quot;:&quot;(.+?)&quot;</stringProp>
@@ -213,7 +213,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GiftList" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GiftList" enabled="false">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
               <collectionProp name="Arguments.arguments">
                 <elementProp name="token" elementType="HTTPArgument">
@@ -766,7 +766,7 @@
                   </elementProp>
                   <elementProp name="giftId" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${giftId}</stringProp>
+                    <stringProp name="Argument.value">5845597de4b0d1dd1bcfecd3</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                     <stringProp name="Argument.name">giftId</stringProp>
@@ -801,7 +801,7 @@
                   </elementProp>
                   <elementProp name="timestamp" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">${__time(,)}${__threadNum}${numAdd}</stringProp>
+                    <stringProp name="Argument.value">${__time(,)}${numAdd}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                     <stringProp name="Argument.name">timestamp</stringProp>

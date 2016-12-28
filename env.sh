@@ -25,7 +25,7 @@ JMETER_PORT=80
 # JMETER_PORT_AGENT=4444
 
 JMETER_START_TIME=10
-JMETER_LOAD_TIME=10
+JMETER_LOAD_TIME=30
 JMETER_SHUT_TIME=10
 JMETER_LOAD_TIME_MIN=$[JMETER_LOAD_TIME/60]
 
@@ -36,6 +36,6 @@ MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift")
-TEST_PLAN=("liveshow_list")
-LOAD_COUNT=(3)
+TEST_PLAN=("send_gift")
+LOAD_COUNT=(1000)
 HTTP_PROTOCOL=http
