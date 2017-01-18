@@ -14,7 +14,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="DEV_VAR" enabled="false">
         <stringProp name="filename">${__P(dev_var)}</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="variableNames">usersig,sdkappid,host,roomId</stringProp>
+        <stringProp name="variableNames">usersig,sdkappid,host,roomId,giftId</stringProp>
         <stringProp name="delimiter">,</stringProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -36,7 +36,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="PRD_VAR" enabled="false">
         <stringProp name="filename">${__P(prd_var)}</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="variableNames">usersig,sdkappid,host,roomId</stringProp>
+        <stringProp name="variableNames">usersig,sdkappid,host,roomId,giftId</stringProp>
         <stringProp name="delimiter">,</stringProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -58,7 +58,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="STG_VAR" enabled="true">
         <stringProp name="filename">${__P(stg_var)}</stringProp>
         <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="variableNames">usersig,sdkappid,host,roomId</stringProp>
+        <stringProp name="variableNames">usersig,sdkappid,host,roomId,giftId</stringProp>
         <stringProp name="delimiter">,</stringProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -202,7 +202,7 @@
               <stringProp name="Sample.scope">all</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="getUserId" enabled="true">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="getUserId" enabled="false">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">userId</stringProp>
               <stringProp name="RegexExtractor.regex">&quot;username&quot;:&quot;(.+?)&quot;</stringProp>
@@ -766,7 +766,7 @@
                   </elementProp>
                   <elementProp name="giftId" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">5845597de4b0d1dd1bcfecd3</stringProp>
+                    <stringProp name="Argument.value">${giftId}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                     <stringProp name="Argument.name">giftId</stringProp>
