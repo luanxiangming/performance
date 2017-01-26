@@ -47,6 +47,7 @@ do
             -Jlogin_stg=$JMETER_TEST_DATA/login_stg.csv \
             -Jcreate_prd=$JMETER_TEST_DATA/account_prd.csv \
             -Jcreate_stg=$JMETER_TEST_DATA/account_stg.csv \
+            -Jcreate_dev=$JMETER_TEST_DATA/account_dev.csv \
             -Jjoin_room=$JMETER_TEST_DATA/join_room.csv \
             -Jsend_groupmsg=$JMETER_TEST_DATA/send_groupmsg.csv
 
