@@ -49,6 +49,7 @@ do
             -Jcreate_stg=$JMETER_TEST_DATA/account_stg.csv \
             -Jcreate_dev=$JMETER_TEST_DATA/account_dev.csv \
             -Jjoin_room=$JMETER_TEST_DATA/join_room.csv \
+            -Jroom_stg=$JMETER_TEST_DATA/create_room.csv \
             -Jsend_groupmsg=$JMETER_TEST_DATA/send_groupmsg.csv
 
         java -jar $JMETER_CMD_RUNNER_PATH --tool Reporter --generate-csv $JMETER_RESULT/$aggregateFile --input-jtl $JMETER_RESULT/$logFile --plugin-type AggregateReport
