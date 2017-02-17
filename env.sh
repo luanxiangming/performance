@@ -24,9 +24,9 @@ JMETER_HOST=staging.vliveshow.com
 
 JMETER_PORT_AGENT=4444
 
-JMETER_START_TIME=10
-JMETER_LOAD_TIME=30
-JMETER_SHUT_TIME=10
+JMETER_START_TIME=5
+JMETER_LOAD_TIME=60
+JMETER_SHUT_TIME=5
 JMETER_LOAD_TIME_MIN=$[JMETER_LOAD_TIME/60]
 
 # MySQL settings
@@ -36,6 +36,6 @@ MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift" "create_account" "create_room")
-TEST_PLAN=("create_room")
-LOAD_COUNT=(40)
+TEST_PLAN=("send_gift")
+LOAD_COUNT=(3000)
 HTTP_PROTOCOL=http
