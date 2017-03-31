@@ -45,6 +45,7 @@ do
             -Jlogin_dev=$JMETER_TEST_DATA/login_dev.csv \
             -Jlogin_prd=$JMETER_TEST_DATA/login_prd.csv \
             -Jlogin_stg=$JMETER_TEST_DATA/login_stg.csv \
+            -Jlogin_vipjr=$JMETER_TEST_DATA/login_vipjr.csv \
             -Jcreate_prd=$JMETER_TEST_DATA/account_prd.csv \
             -Jcreate_stg=$JMETER_TEST_DATA/account_stg.csv \
             -Jcreate_dev=$JMETER_TEST_DATA/account_dev.csv \
