@@ -22,7 +22,7 @@ JMETER_TEST_DATA=${SCRIPT}/TestData
 # JMETER_HOST=www.vliveshow.com
 # JMETER_HOST=staging.vliveshow.com
 JMETER_HOST=172.16.233.82
-JMETER_PORT=8099
+JMETER_PORT=8091
 
 JMETER_PORT_AGENT=4444
 
@@ -37,8 +37,8 @@ MYSQL_USERNAME=root
 MYSQL_PASSWORD=Dujun1205
 MYSQL_DATABASE=vls_perf
 
-# Test settings ("uploadWithFileConvert" "newLogin")
+# Test settings ("VQS" "uploadWithFileConvert" "newLogin")
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift" "create_account" "create_room")
-TEST_PLAN=("uploadWithFileConvert")
-LOAD_COUNT=(100)
+TEST_PLAN=("VQS")
+LOAD_COUNT=(10)
 HTTP_PROTOCOL=http

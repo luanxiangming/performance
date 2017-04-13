@@ -8,7 +8,6 @@ loadLen=${#LOAD_COUNT[@]}
 testPlans=${TEST_PLAN[0]}
 loadCounts=${LOAD_COUNT[0]}
 
-
 for ((i=1;i<testLen;i++))
     do testPlans=$testPlans","${TEST_PLAN[i]}
 done
@@ -16,8 +15,6 @@ done
 for ((i=1;i<loadLen;i++))
     do loadCounts=$loadCounts","${LOAD_COUNT[i]}
 done
-
-
 
 mkdir $JMETER_RESULT
 
@@ -37,7 +34,7 @@ do
         printf "$(date +%s),${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min,${LOAD_COUNT[j]},$JMETER_HOST,$JMETER_LOAD_TIME," >>$JMETER_RESULT/script.txt
         echo "====${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min start running ==="
 
-        JVM_ARGS="-Xms1024m -Xmx2048m" sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
+        JVM_ARGS="-Xms1024m -Xmx2048m" sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -l $JMETER_RESULT/$aggregateFile -e -o $JMETER_RESULT/VQS -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
             -Jdev_var=$JMETER_TEST_DATA/DEV_VAR.csv \
             -Jprd_var=$JMETER_TEST_DATA/PRD_VAR.csv \
             -Jstg_var=$JMETER_TEST_DATA/STG_VAR.csv \
