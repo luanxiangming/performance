@@ -4,8 +4,8 @@ TIMESTAMP=`date +%s`
 # File path settings
 SCRIPT=${HOME}/Developer/performance
 
-#Jmeter 3.0
-JMETER_ROOT_PATH=${HOME}/Developer/apache-jmeter-3.0
+#Jmeter 3.1
+JMETER_ROOT_PATH=${HOME}/Developer/apache-jmeter-3.1
 # JMETER_CMD_RUNNER_PATH=$JMETER_ROOT_PATH/lib/ext/jmeter-plugins-cmd-2.1.jar
 
 #Jmeter 2.11
