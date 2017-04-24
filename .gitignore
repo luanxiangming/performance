@@ -9,7 +9,6 @@ test_servers/
 screenshot*.png
 *.hprof
 
-TestResult/
 res/
 jmeter.log
 
