@@ -3,6 +3,12 @@
 2. Monitor server: the server runs the script and JMeter to kick off tests, and collect metrics.
 
 
+# Update (24 April 2017): <br />
+1. To simplify step2~3 and enable jmeter dashboard since version 3.0, latest jmeter binary with modified properties files have been included.<br />
+2. You can trigger test by "sh go.sh" which leverages docker image "xiangming/java8:node6" which has java8 and node6 inside.<br />
+3. You can still start test by "sh start_test.sh". Further, now you can run e.g. "sh start_test.sh 100"<br />
+
+
 # How to setup the test environment:
 1. Install and run MySQL on monitor server. <br />
    Install and run Node.js on monitor server (http://ask.xmodulo.com/install-node-js-linux.html)
