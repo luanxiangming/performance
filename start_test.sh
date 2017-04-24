@@ -2,6 +2,12 @@
 
 source ./env.sh
 
+
+for arg in "$@"
+do
+    LOAD_COUNT=($arg)
+done
+
 testLen=${#TEST_PLAN[@]}
 loadLen=${#LOAD_COUNT[@]}
 

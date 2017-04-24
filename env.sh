@@ -40,5 +40,5 @@ MYSQL_DATABASE=vls_perf
 # Test settings ("VQS" "uploadWithFileConvert" "newLogin")
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift" "create_account" "create_room")
 TEST_PLAN=("VQS")
-LOAD_COUNT=(10)
+LOAD_COUNT=(5)
 HTTP_PROTOCOL=http
