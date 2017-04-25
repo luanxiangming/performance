@@ -30,7 +30,7 @@ async.forEach(webServices, function(service, callback1) {
                 response.push(line.toString());
             })
             .on('pipe',function() {
-                var len = response.length;
+                var len = response.length - 1;
                 console.log("Requests: " + len);
 
                 var start = response[1].split(",");
@@ -39,7 +39,7 @@ async.forEach(webServices, function(service, callback1) {
                 var stop = response[len - 1].split(",");
                 console.log("Stop: " + stop);
 
-                var time = (parseInt(stop[0]) - parseInt(start[0])) / 1000;
+                var time = ((parseInt(stop[0]) - parseInt(start[0])) / 1000) + 1;
                 console.log("Duration: " + time + " sec");
 
                 tps.push((len / time).toFixed(1));

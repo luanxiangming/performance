@@ -21,10 +21,10 @@
 
 5. Copy the jar of SocketIO sampler to target server. (cp performance/jmeter-socket.io/target/ApacheJmeter_socket_io-0.1.0-SNAPSHOT-jar-with-dependencies.jar apache-jmeter-3.0/lib/ext/)
 
-6. Create a database called vls_perf (or other name) in MySQL. One way is to execute "mysqladmin -h host -u username -p create vls_perf" and enter the password. Remeber to specify the correct host and username. If the command is executed on monitor server, "-h host" can be neglected.
+6. Create a database called performance (or other name) in MySQL. One way is to execute "mysqladmin -h host -u username -p create performance" and enter the password. Remeber to specify the correct host and username. If the command is executed on monitor server, "-h host" can be neglected.
 
-7. Import the database (vls_perf.sql) on monitor server by executing "mysql -u username -p -h host vls_perf < vls_perf.sql". Make sure you are either in the same directory with vls_perf.sql, or specify the complete path to vls_perf.sql. Similarly, remeber to specify the correct host and username. If the command is executed on monitor server, "-h host" can be neglected.
-This step can be verified by seeing four tables "test", "run_log", "run_detail", and "run_metrics" under the "vls_perf" database.
+7. Import the database (perf.sql) on monitor server by executing "mysql -u username -p -h host performance < perf.sql". Make sure you are either in the same directory with perf.sql, or specify the complete path to perf.sql. Similarly, remeber to specify the correct host and username. If the command is executed on monitor server, "-h host" can be neglected.
+This step can be verified by seeing four tables "test", "run_log", "run_detail", and "run_metrics" under the "performance" database.
 
 8. Set up parameters in env.sh:
 SCRIPT: the path to the directory of performance/start_test.sh
@@ -46,7 +46,7 @@ Note: the total number of tests will be JMETER_START_TIME + JMETER_LOAD_TIME + J
 MYSQL_HOST: the hostname of MySQL database.
 MYSQL_USERNAME: the username of MySQL.
 MYSQL_PASSWORD: the password of MySQL.
-MYSQL_DATABASE: the database used for performance test. "vls_perf" by default.
+MYSQL_DATABASE: the database used for performance test. "performance" by default.
 
 The remaining settings are subject to change at each test, and will be explained in the "How to kick off a test" part.
 

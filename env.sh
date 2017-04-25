@@ -34,8 +34,8 @@ JMETER_LOAD_TIME_MIN=$[JMETER_LOAD_TIME/60]
 # MySQL settings
 MYSQL_HOST=localhost
 MYSQL_USERNAME=root
-MYSQL_PASSWORD=Dujun1205
-MYSQL_DATABASE=vls_perf
+MYSQL_PASSWORD=password
+MYSQL_DATABASE=performance
 
 # Test settings ("VQS" "uploadWithFileConvert" "newLogin")
 # Test settings ("ad_list" "liveshow_list" "send_groupmsg" "join_room" "like_it" "send_gift" "create_account" "create_room")

@@ -104,6 +104,7 @@ function fillRun_detail(run_id, script_name) {
 
     new lazy(fs.createReadStream(jtlFile))
         .lines
+        .skip(1)
         .forEach(function(line) {
             var jtlResult = line.toString().split(",");
             if (jtlResult[3] === '200')

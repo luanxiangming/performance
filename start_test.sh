@@ -37,7 +37,7 @@ do
         serverPerfMem=`echo ${TEST_PLAN[i]}\_${LOAD_COUNT[j]}users\_${JMETER_LOAD_TIME_MIN}min\_mem.jtl`
         serverPerfMemGraph=`echo ${TEST_PLAN[i]}\_${LOAD_COUNT[j]}users\_${JMETER_LOAD_TIME_MIN}min\_mem_graph.png`
 
-        printf "$(date +%s),${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min,${LOAD_COUNT[j]},$JMETER_HOST,$JMETER_LOAD_TIME," >>$JMETER_RESULT/script.txt
+        printf "$(date),${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min,${LOAD_COUNT[j]},$JMETER_HOST,$JMETER_LOAD_TIME," >>$JMETER_RESULT/script.txt
         echo "====${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min start running ==="
 
         JVM_ARGS="-Xms1024m -Xmx2048m" sh $JMETER_PATH -n -t $JMETER_SRC/${TEST_PLAN[i]}.jmx -l $JMETER_RESULT/$aggregateFile -e -o $JMETER_RESULT/VQS -JreportPath=$JMETER_RESULT/$logFile -JthreadsCount=${LOAD_COUNT[j]} -Jhost=$JMETER_HOST -Jport=$JMETER_PORT -JholdLoad=$JMETER_LOAD_TIME -JhttpProtocol=$HTTP_PROTOCOL \
@@ -59,11 +59,11 @@ do
         java -jar $JMETER_CMD_RUNNER_PATH --tool Reporter --generate-csv $JMETER_RESULT/$aggregateFile --input-jtl $JMETER_RESULT/$logFile --plugin-type AggregateReport
 
         echo "==== ${TEST_PLAN[i]}_${LOAD_COUNT[j]}users_${JMETER_LOAD_TIME_MIN}min finished ==="
-        echo "$(date +%s),${TEST_PLAN[i]}" >> $JMETER_RESULT/script.txt
+        echo "$(date),${TEST_PLAN[i]}" >> $JMETER_RESULT/script.txt
     done
 done
 END_TIME=`date +%s`
 
 node $SCRIPT/resultAnalyse.js $testPlans $loadCounts $JMETER_RESULT $JMETER_LOAD_TIME_MIN
 
-# node $SCRIPT/vls_perf.js $JMETER_RESULT $MYSQL_HOST $MYSQL_USERNAME $MYSQL_PASSWORD $MYSQL_DATABASE $TIMESTAMP $END_TIME
+# node --print_code_verbose $SCRIPT/perf.js $JMETER_RESULT $MYSQL_HOST $MYSQL_USERNAME $MYSQL_PASSWORD $MYSQL_DATABASE $TIMESTAMP $END_TIME

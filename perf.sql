@@ -23,8 +23,8 @@ DROP TABLE IF EXISTS `test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `test` (
-  `timestamp` char(15) NOT NULL,
-  `end_time` char(15) DEFAULT NULL,
+  `timestamp` char(30) NOT NULL,
+  `end_time` char(30) DEFAULT NULL,
   PRIMARY KEY (`timestamp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -50,9 +50,9 @@ CREATE TABLE `run_log` (
   `test_id` char(15) NOT NULL,
   `script_name` char(60) NOT NULL,
   `server` char(20) DEFAULT NULL,
-  `start_time` char(15) DEFAULT NULL,
+  `start_time` char(30) DEFAULT NULL,
   `duration` int(11) DEFAULT NULL,
-  `end_time` char(15) DEFAULT NULL,
+  `end_time` char(30) DEFAULT NULL,
   `concurrent` int(11) DEFAULT NULL,
   `service` char(30) DEFAULT NULL,
   `avg_response_time` int(11) DEFAULT NULL,
@@ -83,7 +83,7 @@ DROP TABLE IF EXISTS `run_detail`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `run_detail` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `timestamp` char(15) DEFAULT NULL,
+  `timestamp` char(30) DEFAULT NULL,
   `run_id` int(11) DEFAULT NULL,
   `response_time` int(11) DEFAULT NULL,
   `bandwidth` int(11) DEFAULT NULL,
